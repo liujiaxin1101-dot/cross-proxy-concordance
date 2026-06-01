@@ -1,0 +1,17 @@
+{
+  "n_specifications": 48,
+  "observed_median_rho": 0.43647656691134956,
+  "observed_median_kappa": 0.36363636363636365,
+  "null_median_rho_mean": -0.0019287069452286843,
+  "null_rho_95ci": [
+    -0.3562958780350085,
+    0.35573122529644274
+  ],
+  "p_rho_one_sided": 0.0,
+  "p_rho_two_sided": 0.0,
+  "p_kappa_one_sided": 0.0,
+  "p_kappa_two_sided": 0.0,
+  "n_rho_ci_above_zero": 20,
+  "n_rho_ci_span_zero_or_below": 28,
+  "notes": "Joint inference via sign-flip permutation (50,000 iterations). The null distribution models no systematic cross-proxy association by randomly flipping the sign of each specification's \u03c1/\u03ba."
+}

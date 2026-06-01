@@ -1,0 +1,114 @@
+======================================================================
+FINAL RESULTS REPORT
+Data: Calisti et al. (2025), Sci Data 12:1645
+Script: D:\TC-Sport\motion_computation\scripts\final_report.py
+======================================================================
+
+=== DESCRIPTIVE ===
+  132 records from 22 healthy controls (11F/11M, age 19-31)
+  Tasks: CMJ (bilateral countermovement jump) + DJ (bilateral drop jump)
+  3 trials per task per subject -> mean per subject for analysis
+
+=== MAIN RESULTS (N=22 healthy controls) ===
+
+H1  Spearman rank correlation
+    rho = 0.558,  95% CI [0.179, 0.793]
+    -> moderate positive correlation, CI does not cross zero
+
+H2  Classification agreement
+    Cohen's kappa = 0.636, 95% CI [0.314, 0.959]
+    Percent agreement = 81.8%
+    -> substantial agreement (Landis & Koch: "substantial", 0.61 <= kappa < 0.80)
+
+H3  Conflict analysis
+    Conflicts: 4/22 (18%)
+      K+D- = 2,  K-D+ = 2
+    McNemar chi2 = 0.250, p = 0.617
+    -> symmetric conflicts, not attributable to systematic bias
+
+Bland-Altman (pre-second-z subject means)
+    Bias = -0.000,  LoA = [-1.35, 1.35]
+    -> reported on pre-z means to avoid bias=0 by construction
+
+=== SENSITIVITY: Excluding sub24 (extreme outlier) ===
+
+  Metric            Full (N=22)          Excl sub24 (N=21)      Delta
+  ------------------------------------------------------------------
+  Spearman rho      0.558                 0.562                  +0.004
+  rho 95% CI        [0.179,0.793]    [0.173,0.800]
+  Cohen's kappa     0.636                 0.618                  -0.018
+  Agreement         81.8%                  81.0%
+  Conflicts         4/22 (18%)          4/21 (19%)
+  ------------------------------------------------------------------
+
+  Delta rho = +0.004: negligible impact
+  Delta kappa = -0.018: virtually unchanged
+  Sub24 (K=z_score, D=3.54) no longer acts as an extreme lever point after
+  correcting kinematic direction conventions.
+
+  VERDICT: Qualitative conclusions robust. Sub24 has negligible influence
+  on the corrected analysis.
+
+=== POWER ANALYSIS ===
+
+  Current N=22:
+    - 50% power to detect rho >= 0.422
+    - 80% power to detect rho >= 0.567
+
+  To achieve 80% power at alpha=0.05:
+    - rho = 0.25 -> N = 124
+    - rho = 0.30 -> N = 85
+    - rho = 0.40 -> N = 47
+    - rho = 0.50 -> N = 30
+
+  This study serves as a pilot providing effect-size estimates.
+
+=== CMJ-only vs DJ-only ===
+
+  CMJ: N=22
+    Spearman rho = 0.546, 95% CI [0.162, 0.787]
+    Cohen's kappa = 0.455, 95% CI [0.082, 0.827]
+    Agreement = 72.7%, Conflict = 27%
+    Conflicts: 3 K+D-, 3 K-D+
+    McNemar chi2 = 0.167, p = 0.683
+
+  DJ: N=22
+    Spearman rho = 0.300, 95% CI [-0.139, 0.640]
+    Cohen's kappa = 0.273, 95% CI [-0.129, 0.675]
+    Agreement = 63.6%, Conflict = 36%
+    Conflicts: 4 K+D-, 4 K-D+
+    McNemar chi2 = 0.125, p = 0.724
+
+=== FIGURES ===
+
+  05_paper_figure.png            -> figures/05_paper_figure.png
+                                    Main scatter (PNG, 300 dpi)
+
+  05_paper_figure.pdf            -> figures/05_paper_figure.pdf
+                                    Main scatter (PDF, vector, for LaTeX)
+
+  05_main_results.png            -> figures/05_main_results.png
+                                    6-panel: scatter, Bland-Altman, confusion, profiles, CMJ-DJ, summary
+
+  sub24_diagnostic.png           -> figures/sub24_diagnostic.png
+                                    sub24 time-series diagnostic
+
+=== SCRIPTS ===
+
+  01_inspect_c3d.py          inspect c3d structure
+  02_check_participants.py   extract Control/ACL grouping
+  03_extract_features.py     132 records, 8 features
+  ankle_diag.py              ankle angle coordinate verification
+  04_compute_scores.py       K-Score/D-Score + statistics
+  sensitivity_sub24.py       exclude-sub24 sensitivity
+  sub24_diag.py              sub24 time-series diagnostic
+  05_visualize.py            all figures (PNG + PDF)
+  final_report.py            this report
+
+=== QUICK CITATION STRING ===
+
+  Spearman rho = 0.56, 95% CI [0.18, 0.79];
+  Cohen's kappa = 0.64, 95% CI [0.31, 0.96];
+  Agreement = 82%, Conflict = 18%.
+
+======================================================================
