@@ -1,4 +1,4 @@
-# Fragile Consistency: A Perturbation Framework for Cross-Proxy Consistency in Landing Assessment
+# Same Person, Different Risk: Mapping the Fragile Agreement Between Kinematic and Kinetic Landing-Risk Proxies
 
 Analysis pipeline for evaluating agreement between kinematic (K-Score) and kinetic (D-Score) proxy measures of ACL injury risk during jump-landing tasks.
 

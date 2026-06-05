@@ -1,4 +1,4 @@
-# Fragile Consistency: A Perturbation Framework for Cross-Proxy Consistency in Landing Assessment
+# Same Person, Different Risk: Mapping the Fragile Agreement Between Kinematic and Kinetic Landing-Risk Proxies
 
 ## Complete Analysis Report — Computational Logic, Results, and Figures
 

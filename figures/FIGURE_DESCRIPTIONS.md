@@ -1,3 +1,5 @@
+# Same Person, Different Risk: Mapping the Fragile Agreement Between Kinematic and Kinetic Landing-Risk Proxies
+
 # Figure Descriptions
 
 ## Figure 05 — K-Score vs. D-Score Scatter by Landing Task
