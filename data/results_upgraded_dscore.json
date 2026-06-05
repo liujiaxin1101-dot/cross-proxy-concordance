@@ -1,0 +1,48 @@
+{
+  "date": "2026-06-03",
+  "n_subjects": 22,
+  "n_records": 132,
+  "dscore_components_original": [
+    "peak_vgrf_bw",
+    "loading_rate_bw_s"
+  ],
+  "dscore_components_upgraded": [
+    "peak_vgrf_bw",
+    "loading_rate_bw_s",
+    "knee_moment_avg_Nmkg",
+    "hip_moment_avg_Nmkg"
+  ],
+  "spearman_rho_original": 0.5584415584415585,
+  "spearman_rho_upgraded": 0.647656691134952,
+  "spearman_ci_original": [
+    0.1789626124743823,
+    0.7932808324696985
+  ],
+  "spearman_ci_upgraded": [
+    0.3109500799658777,
+    0.8399213778801474
+  ],
+  "cohens_kappa_original": 0.6363636363636364,
+  "cohens_kappa_upgraded": 0.6363636363636364,
+  "kappa_ci_original": [
+    0.31402059888777273,
+    0.9587066738395
+  ],
+  "kappa_ci_upgraded": [
+    0.31402059888777273,
+    0.9587066738395
+  ],
+  "percent_agreement_original": 0.8181818181818182,
+  "percent_agreement_upgraded": 0.8181818181818182,
+  "n_conflicts_original": 4,
+  "n_conflicts_upgraded": 4,
+  "conflict_pct_original": 18.181818181818183,
+  "conflict_pct_upgraded": 18.181818181818183,
+  "dscore_correlation_orig_vs_upgraded": 0.9333709768492378,
+  "bland_altman_bias_upgraded": -3.254972049469209e-16,
+  "bland_altman_sd_diff_upgraded": 0.5639045259025277,
+  "bland_altman_loa_upgraded": [
+    -1.1052528707689546,
+    1.1052528707689542
+  ]
+}
