@@ -1,9 +1,12 @@
+import os
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 import numpy as np
 import pandas as pd
 from scipy import stats
 import json
 
-FEATURES_CSV = os.path.join(PROJECT_ROOT, "data", r"features_raw.csv")
+FEATURES_CSV = os.path.join(PROJECT_ROOT, "data", "features_raw.csv")
 
 df = pd.read_csv(FEATURES_CSV)
 
@@ -84,8 +87,6 @@ sub_agg["K_hi"] = (sub_agg["KScore"] >= median_k).astype(int)
 sub_agg["D_hi"] = (sub_agg["DScore"] >= median_d).astype(int)
 
 from sklearn.metrics import cohen_kappa_score
-import os
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 kappa = cohen_kappa_score(sub_agg["K_hi"], sub_agg["D_hi"])
 agreement = (sub_agg["K_hi"] == sub_agg["D_hi"]).mean()

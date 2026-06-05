@@ -2,10 +2,12 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 from sklearn.metrics import cohen_kappa_score
+import os
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-FEATURES_CSV = os.path.join(PROJECT_ROOT, "data", r"features_raw.csv")
-OUT_MD = os.path.join(PROJECT_ROOT, "data", r"final_results.md")
-OUT_TXT = os.path.join(PROJECT_ROOT, "data", r"final_results.txt")
+FEATURES_CSV = os.path.join(PROJECT_ROOT, "data", "features_raw.csv")
+OUT_MD = os.path.join(PROJECT_ROOT, "data", "final_results.md")
+OUT_TXT = os.path.join(PROJECT_ROOT, "data", "final_results.txt")
 
 df = pd.read_csv(FEATURES_CSV)
 
@@ -224,9 +226,6 @@ with open(OUT_TXT, "w", encoding="utf-8") as f:
 print(f"\nSaved TXT: {OUT_TXT}")
 
 import re
-import os
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 md_lines = []
 for line in report.split('\n'):
